@@ -17,8 +17,12 @@ const config = {
         'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css',
         'https://fonts.googleapis.com/icon?family=Material+Icons'
     ],
-    dependencies: [ /* dependencies to add */ ],
-    devDependencies: [ /* devDependencies to add */ ]
+    dependencies: [
+        'vuetify'
+    ],
+    devDependencies: [
+        'semver'
+    ]
 }
 
 module.exports = config;

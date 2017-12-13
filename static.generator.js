@@ -10,13 +10,13 @@ if (config.scripts || config.stylesheets) {
 }
 
 if (config.dependencies || config.devDepencies) {
- //_self.npm = require('npm');
+ _self.cmd = require('node-cmd');
 }
 
 
 const pageTemplate = page => {
     return `<template>
-<h1>${page}</h1>
+    <h1>${page}</h1>
 </template>
                 
 <script>
@@ -25,7 +25,7 @@ export default {
 }
 </script>
                 
-<style>
+<style lang="scss">
 </style>
 `;
 }
@@ -69,4 +69,14 @@ if (_self.nuxtConfig) {
     }
     fs.writeFileSync('./nuxt.config.js',
     `module.exports = ${JSON.stringify(_self.nuxtConfig)}`);
+}
+
+if (_self.cmd) {
+    config.dependencies.forEach(dep => {
+        _self.cmd.run(`npm install ${dep} --save`);
+    });
+
+    config.devDependencies.forEach(dep => {
+        _self.cmd.run(`npm install ${dep} --save-dev`);
+    });
 }
