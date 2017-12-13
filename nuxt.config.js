@@ -9,13 +9,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
-    script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' },
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js' }
-    ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
