@@ -9,13 +9,17 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "starter:generate": "node static.generator.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint",
-    "site:generate": "node static.generator.js"
+    "precommit": "npm run lint"
+  },
+  "bin": {
+    "nc-generate": "bin/nc.js"
   },
   "dependencies": {
     "nuxt": "^1.0.0-rc11",
     "vue-resource": "^1.3.4",
+    "vuetify": "^0.17.4",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -28,8 +32,8 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "node-cmd": "^3.0.0",
     "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6"
+    "sass-loader": "^6.0.6",
+    "shelljs": "^0.7.8"
   }
 }

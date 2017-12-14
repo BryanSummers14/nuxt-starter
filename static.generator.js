@@ -10,7 +10,7 @@ if (config.scripts || config.stylesheets) {
 }
 
 if (config.dependencies || config.devDepencies) {
- _self.cmd = require('node-cmd');
+ _self.cmd = require('shelljs');
 }
 
 
@@ -73,10 +73,10 @@ if (_self.nuxtConfig) {
 
 if (_self.cmd) {
     config.dependencies.forEach(dep => {
-        _self.cmd.run(`npm install ${dep} --save`);
+        _self.cmd.exec(`npm install ${dep} --save`);
     });
 
     config.devDependencies.forEach(dep => {
-        _self.cmd.run(`npm install ${dep} --save-dev`);
+        _self.cmd.exec(`npm install ${dep} --save-dev`);
     });
 }
