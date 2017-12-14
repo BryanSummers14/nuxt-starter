@@ -1,6 +1,6 @@
 # static-template
 
-> Nuxt.js project
+> Nuxt.js project - The goal is to add a cli command that will use a config.json file to generate pages, layouts, components, store, and dependencies for smaller static sites
 
 ## Build Setup
 
